@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Mark Your Attendence</h1>
+    <div class="container">
+        <div class="left-section">
+            
+            <img src="{{ url_for('video_feed') }}" width="640" height="480" alt="Webcam Feed">
+            <div class="button-group">
+                <form method="post" action="{{ url_for('start') }}">
+                    <button type="submit">Start Attendance</button>
+                </form>
+                <form method="post" action="{{ url_for('stop') }}">
+                    <button type="submit">Stop Attendance</button>
+                </form>
+            </div>
+        </div>
+        <div class="right-section">
+            <h2>Register New Student</h2>
+            <div class="action-group">
+                
+                <form method="post" action="{{ url_for('register') }}">
+                    <input type="text" name="name" placeholder="Enter student name" required>
+                    <input type="text" name="reg_number" placeholder="Enter reg number (e.g., D/BCE/23/0001)" required>
+                    <button type="submit">Register Student</button>
+                </form>
+            </div>
+            <div class="action-group">
+                
+                <a href="{{ url_for('report') }}"><button>View Attendance Report</button></a>
+            </div>
+            <div class="action-group">
+                
+                <a href="{{ url_for('manage') }}"><button>Manage Students</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

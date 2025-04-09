@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register New Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Registering New Student</h1>
+    <div class="container">
+        <div class="left-section">
+            <h2>Capture Face</h2>
+            <p style="color: #C0D9E5; font-size: 1.2em; margin-bottom: 15px;">
+                Please rotate your face slowly to capture accurate images.
+            </p>
+            <img src="{{ url_for('register_feed') }}" width="640" height="480" alt="Registration Feed">
+            <div class="button-group">
+                <form method="post" action="{{ url_for('stop_register') }}">
+                    <button type="submit">Stop Registration</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92c7b0b828f6b004',t:'MTc0NDAwOTY3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

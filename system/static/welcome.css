@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #2b4162, #12100e);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.welcome-container {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+}
+
+.welcome-text {
+    font-size: 3.5em;
+    color: #ffffff;
+    margin-bottom: 40px;
+    animation: slideUp 1s ease-out, glow 2s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.welcome-subtitle {
+    font-size: 1.4em;
+    color: #a1e3f9;
+    margin-bottom: 50px;
+    animation: slideUp 1.2s ease-out;
+    opacity: 0.9;
+}
+
+.attendance-btn {
+    padding: 18px 36px;
+    font-size: 1.6em;
+    background-color:#44679F;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite, slideUp 1.5s ease-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.attendance-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.attendance-btn:hover {
+    background-color: #3FA2F6;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.attendance-btn:hover:before {
+    left: 100%;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: float 8s linear infinite;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2); }
+    to { text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.3); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; }
+}
