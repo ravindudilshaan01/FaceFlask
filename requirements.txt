@@ -1,0 +1,10 @@
+﻿Flask
+opencv-contrib-python
+mediapipe
+numpy
+pandas
+scipy
+Pillow
+scikit-learn
+matplotlib
+seaborn
