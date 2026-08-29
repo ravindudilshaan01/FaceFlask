@@ -1,4 +1,4 @@
-﻿# FaceFlask — Face Recognition Attendance System
+# FaceFlask — Face Recognition Attendance System
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -70,7 +70,15 @@ A Flask app serves the live camera feed and provides:
 
 The noise result is the most useful finding — not a failure to hide. LBPH is clearly not robust to sensor/image noise, which is a real limitation for low-light or low-quality webcams. That gap is the main motivation for moving to a learned embedding-based recognizer (e.g. a small CNN or FaceNet-style model) as the next step.
 
-Full report and plots (confusion matrix, confidence distribution) are in [`evaluation_results/`](evaluation_results/).
+Full report and plots are in [`evaluation_results/`](evaluation_results/).
+
+<p align="center">
+  <img src="evaluation_results/confusion_matrix_20250407_224232.png" width="48%" alt="Confusion Matrix" />
+  <img src="evaluation_results/confidence_distribution_20250407_224232.png" width="48%" alt="Confidence Distribution" />
+</p>
+<p align="center">
+  <img src="evaluation_results/test_mode_comparison_20250407_224232.png" width="70%" alt="Test Mode Comparison" />
+</p>
 
 ---
 
